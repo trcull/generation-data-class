@@ -1,0 +1,1 @@
+# generation-data-class
