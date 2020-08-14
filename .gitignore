@@ -1,3 +1,7 @@
+# avoid having our api keys checked into Git
+environment.txt
+*.output.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
