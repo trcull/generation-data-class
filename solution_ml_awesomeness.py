@@ -37,7 +37,7 @@ class MyDataMunger:
         # don't forget to do "export MONKEYMIND_API_KEY=xxxxxx" on the command line before running this.
         headers = {
             'Content-Type': 'application/json',
-            'Authorization': 'Token %s'.format(os.environ['MONKEYMIND_API_KEY'])
+            'Authorization': 'Token {}'.format(os.environ['MONKEYMIND_API_KEY'])
         }
         a_request = {
             'data':
@@ -45,7 +45,7 @@ class MyDataMunger:
         }
         http_response = requests.post((base_url + service), data=json.dumps(a_request), headers=headers)
         if http_response.status_code != 200:
-            print("Error from Monkeymind: %s, %s".format(http_response.status_code, http_response.text))
+            print("Error from Monkeymind: {}, {}".format(http_response.status_code, http_response.text))
             raise Exception("oops, that failed")
 
             # we are expecting a response like this:
